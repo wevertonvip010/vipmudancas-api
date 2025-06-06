@@ -1,0 +1,40 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API VIP Mudanças",
+    "description": "Documentação oficial da API da VIP Mudanças",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000/api",
+      "description": "Servidor local de desenvolvimento"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Verifica o status da API",
+        "tags": ["Status"],
+        "responses": {
+          "200": {
+            "description": "Retorna o status da API",
+            "content": {
+              "application/json": {
+                "example": {
+                  "sucesso": true,
+                  "dados": {
+                    "status": "OK",
+                    "timestamp": "2025-06-04T21:47:31.900Z",
+                    "uptime": 327.62
+                  },
+                  "erro": null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

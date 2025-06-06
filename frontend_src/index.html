@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIP Mudanças - Sistema de Gerenciamento</title>
+    
+    <!-- GOOGLE ANALYTICS GA4 - NOVA FUNCIONALIDADE -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID_PLACEHOLDER"></script>
+    <script>
+      // Configuração do Google Analytics GA4
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      // Verificar se está em produção antes de enviar eventos
+      const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+      const trackingId = 'GA_TRACKING_ID_PLACEHOLDER'; // Será substituído pela variável de ambiente
+      
+      if (isProduction && trackingId && trackingId !== 'GA_TRACKING_ID_PLACEHOLDER') {
+        gtag('config', trackingId, {
+          page_title: 'VIP Mudanças - Sistema',
+          page_location: window.location.href,
+          custom_map: {
+            'custom_parameter_1': 'sistema_vip_mudancas'
+          }
+        });
+        
+        // Função global para rastrear eventos
+        window.trackEvent = function(eventName, category, label, value) {
+          gtag('event', eventName, {
+            event_category: category,
+            event_label: label,
+            value: value,
+            custom_parameter_1: 'sistema_vip_mudancas'
+          });
+        };
+        
+        console.log('Google Analytics GA4 configurado para produção');
+      } else {
+        // Modo desenvolvimento - apenas log no console
+        window.trackEvent = function(eventName, category, label, value) {
+          console.log('📊 GA4 Event (DEV):', {
+            event: eventName,
+            category: category,
+            label: label,
+            value: value,
+            timestamp: new Date().toISOString()
+          });
+        };
+        
+        console.log('Google Analytics GA4 em modo desenvolvimento (apenas logs)');
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+

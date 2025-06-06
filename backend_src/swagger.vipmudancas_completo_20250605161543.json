@@ -1,0 +1,86 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API VIP Mudanças",
+    "description": "Documentação oficial da API da VIP Mudanças",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000/api",
+      "description": "Servidor local de desenvolvimento"
+    }
+  ],
+  "paths": {
+    "/saude": {
+      "get": {
+        "summary": "Verifica o status da API",
+        "responses": {
+          "200": {
+            "description": "API operante"
+          }
+        }
+      }
+    },
+    "/clientes": {
+      "get": {
+        "summary": "Lista todos os clientes",
+        "responses": {
+          "200": {
+            "description": "Clientes retornados com sucesso"
+          }
+        }
+      }
+    },
+    "/mudancas": {
+      "get": {
+        "summary": "Lista todas as mudanças",
+        "responses": {
+          "200": {
+            "description": "Mudanças retornadas com sucesso"
+          }
+        }
+      }
+    },
+    "/contratos": {
+      "get": {
+        "summary": "Lista todos os contratos",
+        "responses": {
+          "200": {
+            "description": "Contratos retornados com sucesso"
+          }
+        }
+      }
+    },
+    "/guardamoveis": {
+      "get": {
+        "summary": "Lista todas as caixas de guarda-móveis",
+        "responses": {
+          "200": {
+            "description": "Boxes retornados com sucesso"
+          }
+        }
+      }
+    },
+    "/usuarios": {
+      "get": {
+        "summary": "Lista todos os usuários",
+        "responses": {
+          "200": {
+            "description": "Usuários retornados com sucesso"
+          }
+        }
+      }
+    },
+    "/financeiro": {
+      "get": {
+        "summary": "Resumo financeiro",
+        "responses": {
+          "200": {
+            "description": "Resumo financeiro retornado com sucesso"
+          }
+        }
+      }
+    }
+  }
+}

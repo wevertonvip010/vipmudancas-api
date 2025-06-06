@@ -1,0 +1,98 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API VIP Mudanças",
+    "description": "Documentação oficial da API da VIP Mudanças",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000/api",
+      "description": "Servidor local de desenvolvimento"
+    }
+  ],
+  "paths": {
+    "/saude": {
+      "get": {
+        "summary": "Verifica o status da API",
+        "responses": {
+          "200": {
+            "description": "API operante"
+          }
+        }
+      }
+    },
+    "/clientes": {
+      "get": {
+        "summary": "Lista todos os clientes",
+        "responses": {
+          "200": {
+            "description": "Lista de clientes retornada com sucesso"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria um novo cliente",
+        "responses": {
+          "201": {
+            "description": "Cliente criado com sucesso"
+          }
+        }
+      }
+    },
+    "/mudancas": {
+      "get": {
+        "summary": "Lista todas as mudanças",
+        "responses": {
+          "200": {
+            "description": "Lista de mudanças retornada com sucesso"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria uma nova mudança",
+        "responses": {
+          "201": {
+            "description": "Mudança registrada com sucesso"
+          }
+        }
+      }
+    },
+    "/contratos": {
+      "get": {
+        "summary": "Lista todos os contratos",
+        "responses": {
+          "200": {
+            "description": "Lista de contratos retornada com sucesso"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria um novo contrato",
+        "responses": {
+          "201": {
+            "description": "Contrato criado com sucesso"
+          }
+        }
+      }
+    },
+    "/guarda-moveis": {
+      "get": {
+        "summary": "Lista todos os boxes de guarda-móveis",
+        "responses": {
+          "200": {
+            "description": "Lista de guarda-móveis retornada com sucesso"
+          }
+        }
+      },
+      "post": {
+        "summary": "Registra novo item no guarda-móveis",
+        "responses": {
+          "201": {
+            "description": "Item registrado com sucesso"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API VIP Mudanças",
+    "description": "Documentação oficial da API da VIP Mudanças",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000/api",
+      "description": "Servidor local de desenvolvimento"
+    }
+  ],
+  "paths": {
+    "/saúde": {
+      "get": {
+        "summary": "Verifica o status da API",
+        "responses": {
+          "200": {
+            "description": "API operante"
+          }
+        }
+      }
+    },
+    "/clientes": {
+      "get": {
+        "summary": "Lista de todos os clientes",
+        "responses": {
+          "200": {
+            "description": "Lista de clientes retornados com sucesso"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar um novo cliente",
+        "responses": {
+          "201": {
+            "description": "Cliente criado com sucesso"
+          }
+        }
+      }
+    },
+    "/mudanças": {
+      "get": {
+        "summary": "Lista de todas as mudanças",
+        "responses": {
+          "200": {
+            "description": "Lista de mudanças retornadas com sucesso"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria uma nova mudança",
+        "responses": {
+          "201": {
+            "description": "Mudança criada com sucesso"
+          }
+        }
+      }
+    },
+    "/contratos": {
+      "get": {
+        "summary": "Lista de todos os contratos",
+        "responses": {
+          "200": {
+            "description": "Lista de contratos retornados com sucesso"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar um novo contrato",
+        "responses": {
+          "201": {
+            "description": "Contrato criado com sucesso"
+          }
+        }
+      }
+    },
+    "/guarda-móveis": {
+      "get": {
+        "summary": "Lista todas as caixas de guarda-móveis",
+        "responses": {
+          "200": {
+            "description": "Lista de itens de guarda-móveis retornada"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cadastrar-se novo item no guarda-móveis",
+        "responses": {
+          "201": {
+            "description": "Item de guarda-móveis cadastrado com sucesso"
+          }
+        }
+      }
+    },
+    "/usuários": {
+      "get": {
+        "summary": "Lista de todos os usuários",
+        "responses": {
+          "200": {
+            "description": "Lista de usuários retornados com sucesso"
+          }
+        }
+      }
+    },
+    "/financeiro": {
+      "get": {
+        "summary": "Resumo financeiro",
+        "responses": {
+          "200": {
+            "description": "Resumo financeiro retornado com sucesso"
+          }
+        }
+      }
+    }
+  }
+}

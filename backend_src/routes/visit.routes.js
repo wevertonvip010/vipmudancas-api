@@ -1,0 +1,1 @@
+const express = require('express'); const router = express.Router(); router.get('/', (req, res) => { res.status(200).json({ sucesso: true, dados: { message: 'Rota de visit funcionando' }, erro: null }); }); module.exports = router;
