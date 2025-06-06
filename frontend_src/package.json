@@ -2,9 +2,9 @@
   "name": "vip-mudancas-api",
   "version": "1.0.0",
   "description": "API da VIP Mudanças",
-  "main": "backend_src/index.js",
+  "main": "backend_src/server.js",
   "scripts": {
-    "start": "node backend_src/index.js"
+    "start": "node backend_src/server.js"
   },
   "keywords": [],
   "author": "Weverton",
